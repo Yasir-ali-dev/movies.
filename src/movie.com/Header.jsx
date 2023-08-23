@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 
 
-const Header = () => {
-  const [search,setSearch]=useState("");
+const Header = ({movies,handleSearch}) => {
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    handleSearch(e.target);
+
+  }
 
   return (
     <header>
@@ -17,15 +22,13 @@ const Header = () => {
             <a href="#_">Genre</a>
             <a href="#_">By Year</a>
         </nav>
-        <form >
+        <form className='form'>
           <input 
             type="text" 
             placeholder='Search' 
             name='search' 
-            value={search}
-            onChange={(e)=> setSearch(e.target.value)}  
+            onChange={handleSubmit} 
           />
-          <button type='submit'>Search</button>
         </form>
       </div>
     </header>
