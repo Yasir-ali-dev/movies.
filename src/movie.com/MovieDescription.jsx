@@ -3,7 +3,7 @@ import React from 'react'
 const MovieDescription = ({movie}) => {
   return (
     <div className='movie-description'>
-        <img src={movie.poster} alt={movie.name} />
+        <img src={movie[0].poster} alt={movie.name} />       
     </div>
   )
 }

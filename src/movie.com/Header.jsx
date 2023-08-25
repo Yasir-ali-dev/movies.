@@ -1,5 +1,6 @@
+import { Menu } from '@mui/material';
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Header = ({movies,handleSearch}) => {
 
@@ -16,12 +17,12 @@ const Header = ({movies,handleSearch}) => {
         </div>
       <div className='menu-container'>
         <nav className='menu'>
-            <a href="#_">Home</a>
-            <a href="#_">Web Series</a>
-            <a href="#_">Dual Audio</a>
-            <a href="#_">Genre</a>
-            <a href="#_">By Year</a>
+            <Link to="/">Home</Link>
+            <Link to="/years">Years</Link>
+            <Link to="/genre">Genre</Link>
+            <Link to="/rating">Rating</Link>
         </nav>
+
         <form className='form'>
           <input 
             type="text" 
@@ -30,6 +31,9 @@ const Header = ({movies,handleSearch}) => {
             onChange={handleSubmit} 
           />
         </form>
+        <button className='menu__btn'>
+          <img src="/menu.png" alt=""  /> 
+        </button> 
       </div>
     </header>
   )

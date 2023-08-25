@@ -306,6 +306,7 @@ body{
 .container{
   background-color:#c4c4c4;
   width: 100vw;
+  margin-bottom: 0.5em;
 }
 
 
@@ -332,7 +333,7 @@ body{
     grid-template-columns:1fr;
     grid-template-rows:1fr;
     padding: 0.2em 0.35em;
-  }
+  } 
 
 }
 @media (max-width : 60em) and (min-width : 33em) {
@@ -416,8 +417,73 @@ body{
 }
 .container > h1 {
   text-align: center;
-    padding: 0.5em 0.1em;
-    text-shadow: 5px 4px 9px black;
-    color: gold;
-    font-size: 2em;
+  padding: 0.5em 0.1em;
+  text-shadow: 5px 4px 9px black;
+  color: gold;
+  font-size: 2em;
+}
+.menu__btn{
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.1em 0.2em;
+  background-color: white;
+  box-shadow: 2px 3px 3px black;
+  display: none;
+}
+
+@media (max-width : 33em ){
+  .menu{
+    display: none;
+  }
+  .menu__btn{
+    display: block;
+  }
+}
+
+.menu__btn > img {
+  background: transparent;
+  color: green;
+  width: 1em;
+  padding: 0;
+  font-weight: 600;
+}
+.btn-group{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  color: dodgerblue;
+  box-shadow: 7px 5px 4px black;
+  background-color: #383838;
+}
+
+.btn-group>li > button,.btn-group > button {
+  font-size: 1.3em;
+  padding: 0.2em 0.4em;
+  font-weight: 600;
+  margin-left:.12em;
+}
+
+.genre{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows:1fr 1fr;
+  grid-gap: .2em .5em;
+  margin: .2em;
+}
+
+.genre > a{
+  text-decoration: none;
+  padding: 0.3em 0.4em;
+  border: 2px solid gray;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 0.3em;
+  color: #292828;
+  font-weight: 600;
+  text-shadow: 4px 3px 3px grey;
+  transition: hover .3s;
+}
+
+.genre > a:hover{
+  background-color: aquamarine;
 }
